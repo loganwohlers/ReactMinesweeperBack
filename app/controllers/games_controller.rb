@@ -2,7 +2,7 @@ class GamesController < ApplicationController
   skip_before_action :verify_authenticity_token
 
   def index
-    @games = Game.all.order(difficulty: :asc).limit(10)
+    @games = Game.all.order(difficulty: :asc)
     render json: @games
 
   end
