@@ -7,27 +7,16 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-# User.destroy_all
-# Game.destroy_all
-#
-# user1 = User.create(username: 'claire')
-# user2 = User.create(username: 'logan')
-#
-# game1 = Game.create(user: user2, difficulty: 'beginner', score: 20)
-# game2 = Game.create(user: user2, difficulty: 'intermediate', score: 80)
-# game3 = Game.create(user: user1, difficulty: 'difficult', score: 200)
-# game4 = Game.create(user: user1, difficulty: 'beginner', score: 10)
-# game6 = Game.create(user: user2, difficulty: 'intermediate', score: 100)
+User.destroy_all
+Game.destroy_all
 
-dick = User.find_by(username: "can't beat this score")
-games = Game.where(user_id: dick.id)
-dick2 = User.find_by(username: 'i am the greatest')
-games2 = Game.where(user_id: dick2.id)
+user1 = User.create(username: 'claire')
+user2 = User.create(username: 'logan')
+user3 = User.create(username: 'brian')
 
-games.each do |game|
-  game.destroy
-end
-
-games2.each do |game|
-  game.destroy
-end
+game1 = Game.create(user: user2, difficulty: 'beginner', score: 20)
+game2 = Game.create(user: user2, difficulty: 'intermediate', score: 80)
+game3 = Game.create(user: user3, difficulty: 'difficult', score: 200)
+game4 = Game.create(user: user1, difficulty: 'beginner', score: 10)
+game5 = Game.create(user: user3, difficulty: 'beginner', score: 90)
+game6 = Game.create(user: user2, difficulty: 'intermediate', score: 100)
