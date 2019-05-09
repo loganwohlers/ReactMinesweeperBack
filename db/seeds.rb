@@ -19,10 +19,10 @@
 # game4 = Game.create(user: user1, difficulty: 'beginner', score: 10)
 # game6 = Game.create(user: user2, difficulty: 'intermediate', score: 100)
 
-claire = User.find_by(username: 'claire')
-games = Game.where(user_id: claire.id)
-logan = User.find_by(username: 'logan')
-games2 = Game.where(user_id: logan.id)
+dick = User.find_by(username: "can't beat this score")
+games = Game.where(user_id: dick.id)
+dick2 = User.find_by(username: 'i am the greatest')
+games2 = Game.where(user_id: dick2.id)
 
 games.each do |game|
   game.destroy
